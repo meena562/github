@@ -1,0 +1,26 @@
+{% extends "services/base.html" %}
+{% block title  %}useredit{% endblock %}
+{% block content %}
+<div class="container">
+	<div class="row">
+		<div class="col-md-2"></div>
+		<div class="col-md-8">
+			<form method="POST" info.id>
+			{% csrf_token %}
+			<input type="text" class="form-control" name="car_name" value="{{info.car_name}}" placeholder="enter car_name">
+			<input type="text" class="form-control" name="service_type" value="{{info.service_type}}" placeholder="enter service_type">
+			<input type="number" class="form-control" name="quantity" value="{{info.quantity}}" placeholder="enter quantity">
+			<input type="password" class="form-control" name="price"value="{{info.price}}" placeholder="enter price"> 
+			<input type="submit" value="submit">
+
+
+
+
+
+			</form>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}
